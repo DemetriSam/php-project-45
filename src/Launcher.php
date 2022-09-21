@@ -10,15 +10,17 @@ use function Brain\Cli\checkAnswer;
 use function Brain\Cli\evenGame;
 use function Brain\Cli\calcGame;
 use function Brain\Cli\gcdcGame;
+use function Brain\Cli\progressionGame;
 
 function launch($gameTitle)
 {
     $name = greeting();
 
     $dict = [
-        'Even' => fn () => evenGame(),
-        'Calc' => fn () =>calcGame(),
-        'Gcd' => fn() =>gcdGame(),
+        'Even' => fn() => evenGame(),
+        'Calc' => fn() => calcGame(),
+        'Gcd' => fn() => gcdGame(),
+        'Progression' => fn() => progressionGame(),
     ];
 
     $game = $dict[$gameTitle]();
