@@ -14,3 +14,5 @@ brain-gcd:
 	composer exec brain-gcd
 brain-progression:
 	composer exec brain-progression
+brain-prime:
+	composer exec brain-prime

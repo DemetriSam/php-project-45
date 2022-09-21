@@ -11,6 +11,7 @@ use function Brain\Cli\evenGame;
 use function Brain\Cli\calcGame;
 use function Brain\Cli\gcdcGame;
 use function Brain\Cli\progressionGame;
+use function Brain\Cli\primeGame;
 
 function launch($gameTitle)
 {
@@ -21,6 +22,7 @@ function launch($gameTitle)
         'Calc' => fn() => calcGame(),
         'Gcd' => fn() => gcdGame(),
         'Progression' => fn() => progressionGame(),
+        'Prime' => fn() => primeGame(),
     ];
 
     $game = $dict[$gameTitle]();

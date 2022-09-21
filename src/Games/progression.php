@@ -2,6 +2,8 @@
 
 namespace Brain\Cli;
 
+use function Brain\Cli\isPrime;
+
 function progressionGame()
 {
     $gameSet = [
