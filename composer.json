@@ -10,7 +10,9 @@
 
         "files": [
             "src/Cli.php",
-            "src/Even.php"
+            "src/Even.php",
+            "src/Functions.php",
+            "src/Launcher.php"
         ]
     },
     "authors": [

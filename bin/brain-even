@@ -3,6 +3,6 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use function Brain\Cli\startEvenGame;
+use function Brain\Cli\launch;
 
-startEvenGame();
+launch('Even');
