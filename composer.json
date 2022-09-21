@@ -1,0 +1,17 @@
+{
+    "name": "hexlet/code",
+    "description": "the first project on hexlet platform",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DemetriSam",
+            "email": "samartsew@gmail.com"
+        }
+    ],
+    "require": {}
+}
