@@ -10,9 +10,11 @@
 
         "files": [
             "src/Cli.php",
-            "src/Games.php",
             "src/Functions.php",
-            "src/Launcher.php"
+            "src/Launcher.php",
+            "src/Games/even.php",
+            "src/Games/calc.php",
+            "src/Games/gcd.php"
         ]
     },
     "authors": [
