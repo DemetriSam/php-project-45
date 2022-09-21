@@ -9,7 +9,7 @@ function gcd($a, $b)
 {
     $r = $a % $b;
 
-    if($r === 0) {
+    if ($r === 0) {
         return $b;
     }
 

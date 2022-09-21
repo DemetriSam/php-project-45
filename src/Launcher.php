@@ -29,7 +29,7 @@ function launch($gameTitle)
 
     line($rules);
 
-    foreach($set as [$question, $rightAnswer]) {
+    foreach ($set as [$question, $rightAnswer]) {
         $answer = askQuestion($question);
         $result = checkAnswer($rightAnswer, $answer, $name);
         if (!$result) {
