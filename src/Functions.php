@@ -20,7 +20,7 @@ function isPrime($number, $div = 2)
 {
     if ($number % $div && $div < $number) {
         return false;
-    } elseif ($number/$div == 1) {
+    } elseif ($number / $div == 1) {
         return true;
     }
 
