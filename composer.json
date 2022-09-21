@@ -10,7 +10,7 @@
 
         "files": [
             "src/Cli.php",
-            "src/Even.php",
+            "src/Games.php",
             "src/Functions.php",
             "src/Launcher.php"
         ]
@@ -26,7 +26,8 @@
     },
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
       ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7"

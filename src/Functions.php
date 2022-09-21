@@ -8,7 +8,7 @@ use function cli\prompt;
 
 function checkAnswer($rightAnswer, $answer, $name)
 {
-    if ($answer === $rightAnswer) {
+    if ($answer == $rightAnswer) {
         line('Correct!');
         return true;
     } else {

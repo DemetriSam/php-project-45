@@ -8,6 +8,7 @@ use function Brain\Cli\greeting;
 use function Brain\Cli\askQuestion;
 use function Brain\Cli\checkAnswer;
 use function Brain\Cli\evenGame;
+use function Brain\Cli\calcGame;
 
 function launch($gameTitle)
 {
@@ -15,6 +16,7 @@ function launch($gameTitle)
 
     $dict = [
         'Even' => fn () => evenGame(),
+        'Calc' => fn () =>calcGame(),
     ];
 
     $game = $dict[$gameTitle]();
