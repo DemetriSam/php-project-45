@@ -11,7 +11,7 @@ function evenGame()
 
     $questionsCount = 3;
     $range = [0, 100];
-    
+
     for ($i = 0; $i < $questionsCount; $i++) {
         $question = rand(...$range);
         $isEven = !($question % 2);

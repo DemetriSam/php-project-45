@@ -13,7 +13,7 @@ function gcdGame()
 
     $questionsCount = 3;
     $range = [0, 99];
-    
+
     for ($i = 0; $i < $questionsCount; $i++) {
         $first = rand(...$range);
         $second = rand(...$range);
