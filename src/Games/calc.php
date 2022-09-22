@@ -21,15 +21,15 @@ function calcGame()
 
         switch ($action) {
             case 1:
-                $question = $first . '+' . $second;
+                $question = $first . ' + ' . $second;
                 $rightAnswer = $first + $second;
                 break;
             case 2:
-                $question = $first . '-' . $second;
+                $question = $first . ' - ' . $second;
                 $rightAnswer = $first - $second;
                 break;
             case 3:
-                $question = $first . '*' . $second;
+                $question = $first . ' * ' . $second;
                 $rightAnswer = $first * $second;
                 break;
             default:
