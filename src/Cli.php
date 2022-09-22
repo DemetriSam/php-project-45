@@ -14,7 +14,7 @@ function greeting()
     return $name;
 }
 
-function checkAnswer($rightAnswer, $answer, $name)
+function checkAnswer(int|string $rightAnswer, int|string $answer, string $name)
 {
     if ($answer == $rightAnswer) {
         line('Correct!');
@@ -26,7 +26,7 @@ function checkAnswer($rightAnswer, $answer, $name)
     }
 }
 
-function askQuestion($question)
+function askQuestion(string $question)
 {
     line("Question: %s", $question);
     $answer = prompt('Your answer');

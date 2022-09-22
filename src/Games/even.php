@@ -14,7 +14,7 @@ function evenGame()
 
     for ($i = 0; $i < $questionsCount; $i++) {
         $question = rand(...$range);
-        $isEven = !($question % 2);
+        $isEven = $question % 2 ? false : true;
         $rightAnswer = $isEven ? 'yes' : 'no';
 
         $gameSet['set'][] = [$question, $rightAnswer];

@@ -15,6 +15,7 @@ function progressionGame()
     $startRange = [0, 10];
     $stepRange = [0, 20];
     $lengthOfSequence = 10;
+    $sequence = [];
 
     for ($i = 0; $i < $questionsCount; $i++) {
         $start = rand(...$startRange);

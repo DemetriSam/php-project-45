@@ -33,6 +33,8 @@ function calcGame()
                 $rightAnswer = $first * $second;
                 break;
             default:
+                $question = $first . ' + ' . $second;
+                $rightAnswer = $first + $second;
                 break;
         }
         $gameSet['set'][] = [$question, $rightAnswer];
