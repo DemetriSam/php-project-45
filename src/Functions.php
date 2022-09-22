@@ -16,13 +16,17 @@ function gcd($a, $b)
     return gcd($b, $r);
 }
 
-function isPrime($number, $div = 2)
+function isPrime(int $number)
 {
-    if ($number % $div && $div < $number) {
+    if ($number === 0 or $number === 1) {
         return false;
-    } elseif ($number / $div == 1) {
-        return true;
+    }
+    
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i === 0) {
+            return false;
+        }
     }
 
-    return isPrime($number, $div + 1);
+    return true;
 }

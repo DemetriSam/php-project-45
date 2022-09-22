@@ -12,17 +12,19 @@ function progressionGame()
     ];
 
     $questionsCount = 3;
+    $startRange = [0, 10];
+    $stepRange = [0, 20];
+    $lengthOfSequence = 10;
+
     for ($i = 0; $i < $questionsCount; $i++) {
-        $start = rand(0, 10);
-        $step = rand(0, 20);
-        $length = 10;
+        $start = rand(...$startRange);
+        $step = rand(...$startRange);
 
-
-        for ($x = 0; $x < 10; $x++) {
+        for ($x = 0; $x < $lengthOfSequence; $x++) {
             $sequence[$x] = $start + $x * $step;
         }
 
-        $missingValueIndex = rand(0, $length);
+        $missingValueIndex = rand(0, $lengthOfSequence - 1);
         $rightAnswer = $sequence[$missingValueIndex];
         $sequence[$missingValueIndex] = '..';
         $question = implode(' ', $sequence);

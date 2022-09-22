@@ -12,9 +12,11 @@ function gcdGame()
     ];
 
     $questionsCount = 3;
+    $range = [0, 99];
+    
     for ($i = 0; $i < $questionsCount; $i++) {
-        $first = rand(0, 99);
-        $second = rand(0, 99);
+        $first = rand(...$range);
+        $second = rand(...$range);
 
         $question = $first . ' ' . $second;
         $rightAnswer = gcd($first, $second);

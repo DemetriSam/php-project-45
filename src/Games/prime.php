@@ -12,8 +12,9 @@ function primeGame()
     ];
 
     $questionsCount = 3;
+    $range = [0, 100];
     for ($i = 0; $i < $questionsCount; $i++) {
-        $question = rand(0, 100);
+        $question = rand(...$range);
         $rightAnswer = isPrime($question) ? 'yes' : 'no';
 
         $gameSet['set'][] = [$question, $rightAnswer];

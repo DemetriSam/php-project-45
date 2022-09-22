@@ -10,21 +10,25 @@ function calcGame()
     ];
 
     $questionsCount = 3;
+    $quantityOfActions = 3;
+    $firstRange = [0, 99];
+    $secondRange = [0, 10];
+
     for ($i = 0; $i < $questionsCount; $i++) {
-        $action = rand(0, 2);
-        $first = rand(0, 99);
-        $second = rand(0, 10);
+        $action = rand(1, $quantityOfActions);
+        $first = rand(...$firstRange);
+        $second = rand(...$secondRange);
 
         switch ($action) {
-            case 0:
+            case 1:
                 $question = $first . '+' . $second;
                 $rightAnswer = $first + $second;
                 break;
-            case 1:
+            case 2:
                 $question = $first . '-' . $second;
                 $rightAnswer = $first - $second;
                 break;
-            case 2:
+            case 3:
                 $question = $first . '*' . $second;
                 $rightAnswer = $first * $second;
                 break;
