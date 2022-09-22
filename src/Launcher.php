@@ -5,6 +5,7 @@ namespace Brain\Cli;
 use function cli\line;
 use function cli\prompt;
 use function Brain\Cli\greeting;
+use function Brain\Cli\askName;
 use function Brain\Cli\askQuestion;
 use function Brain\Cli\checkAnswer;
 use function Brain\Cli\evenGame;
@@ -15,7 +16,8 @@ use function Brain\Cli\primeGame;
 
 function launch($gameTitle)
 {
-    $name = greeting();
+    greeting();
+    $name = askName();
 
     $dict = [
         'Even' => fn() => evenGame(),
