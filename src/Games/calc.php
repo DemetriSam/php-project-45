@@ -25,18 +25,17 @@ function calcGame()
 
 function getRandomAction(int $first, int $second)
 {
-    $quantityOfActions = 3;
     $operator = array_rand(CALC_ACTIONS);
     $question = implode(' ', [$first, $operator, $second]);
 
     switch ((string)$operator) {
-        case '+':
+        case (string)'+':
             $rightAnswer = $first + $second;
             break;
-        case '-':
+        case (string)'-':
             $rightAnswer = $first - $second;
             break;
-        case '*':
+        case (string)'*':
             $rightAnswer = $first * $second;
             break;
         default:
