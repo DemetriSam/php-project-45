@@ -2,8 +2,8 @@
 
 namespace Brain\Cli;
 
-const GCD_RULES = 'What is the result of the expression?';
-const GCD_RANGE = [0, 99];
+const GCD_RULES = 'Find the greatest common divisor of given numbers.';
+const GCD_RANGE = [1, 99];
 
 function gcdGame()
 {
@@ -19,7 +19,7 @@ function gcdGame()
         $rounds[] = [$question, $rightAnswer];
     }
 
-    return $gameSet;
+    return launch(GCD_RULES, $rounds);
 }
 
 function gcd(int $a, int $b)
