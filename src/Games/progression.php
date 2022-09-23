@@ -14,7 +14,6 @@ function progressionGame()
     $rounds = [];
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-
         $sequence = [];
 
         $start = rand(...PGS_START_RANGE);
