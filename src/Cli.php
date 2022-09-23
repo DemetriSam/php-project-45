@@ -14,18 +14,6 @@ function greeting()
     return $name;
 }
 
-function checkAnswer(int|string $rightAnswer, int|string $answer, string $name)
-{
-    if ($answer == $rightAnswer) {
-        line('Correct!');
-        return true;
-    } else {
-        line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $rightAnswer);
-        line('Let\'s try again, %s!', $name);
-        return false;
-    }
-}
-
 function askQuestion(string $question)
 {
     line("Question: %s", $question);

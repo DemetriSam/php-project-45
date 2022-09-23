@@ -2,43 +2,50 @@
 
 namespace Brain\Cli;
 
+use function Brain\Cli\launch;
+
+const RULES = 'What is the result of the expression?';
+const RANGE_OF_FIRST_NUMBER = [0, 99];
+const RANGE_OF_SECOND_NUMBER = [0, 10];
+const ACTIONS = ['+', '-', '*'];
+const ROUNDS_COUNT = 3;
+
 function calcGame()
 {
-    $gameSet = [
-        'rules' => 'What is the result of the expression?',
-        'set' => [],
-    ];
+    $rounds = [];
 
-    $questionsCount = 3;
-    $quantityOfActions = 3;
-    $firstRange = [0, 99];
-    $secondRange = [0, 10];
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $first = rand(...RANGE_OF_FIRST_NUMBER);
+        $second = rand(...RANGE_OF_SECOND_NUMBER);
 
-    for ($i = 0; $i < $questionsCount; $i++) {
-        $action = rand(1, $quantityOfActions);
-        $first = rand(...$firstRange);
-        $second = rand(...$secondRange);
-
-        switch ($action) {
-            case 1:
-                $question = $first . ' + ' . $second;
-                $rightAnswer = $first + $second;
-                break;
-            case 2:
-                $question = $first . ' - ' . $second;
-                $rightAnswer = $first - $second;
-                break;
-            case 3:
-                $question = $first . ' * ' . $second;
-                $rightAnswer = $first * $second;
-                break;
-            default:
-                $question = $first . ' + ' . $second;
-                $rightAnswer = $first + $second;
-                break;
-        }
-        $gameSet['set'][] = [$question, $rightAnswer];
+        [$question, $rightAnswer] = getRandomAction($first, $second);
+        
+        $rounds[] = [$question, $rightAnswer];
     }
 
-    return $gameSet;
+    launch(RULES, $rounds);
+}
+
+function getRandomAction(int $first, int $second)
+{
+    $quantityOfActions = 3;
+    $operator = array_rand(ACTIONS);
+    $question = implode(' ', [$first, $operator, $second]);
+    switch ($operator) {
+        case '+':
+            $rightAnswer = $first + $second;
+            break;
+        case '-':
+            $rightAnswer = $first - $second;
+            break;
+        case '*':
+            $rightAnswer = $first * $second;
+            break;
+        default:
+            $question = $first . ' + ' . $second;
+            $rightAnswer = $first + $second;
+            break;
+    }
+
+    return [$question, $rightAnswer];
 }

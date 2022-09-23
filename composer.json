@@ -7,7 +7,6 @@
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         },
-
         "files": [
             "src/Cli.php",
             "src/Functions.php",
@@ -35,7 +34,7 @@
         "bin/brain-gcd",
         "bin/brain-progression",
         "bin/brain-prime"
-      ],
+    ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7"
     }
