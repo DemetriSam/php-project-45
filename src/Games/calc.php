@@ -19,7 +19,7 @@ function calcGame()
         $second = rand(...RANGE_OF_SECOND_NUMBER);
 
         [$question, $rightAnswer] = getRandomAction($first, $second);
-        
+
         $rounds[] = [$question, $rightAnswer];
     }
 
@@ -31,6 +31,7 @@ function getRandomAction(int $first, int $second)
     $quantityOfActions = 3;
     $operator = array_rand(ACTIONS);
     $question = implode(' ', [$first, $operator, $second]);
+
     switch ($operator) {
         case '+':
             $rightAnswer = $first + $second;
