@@ -29,7 +29,7 @@ function getRandomAction(int $first, int $second)
     $operator = array_rand(CALC_ACTIONS);
     $question = implode(' ', [$first, $operator, $second]);
 
-    switch ($operator) {
+    switch ((string)$operator) {
         case '+':
             $rightAnswer = $first + $second;
             break;
