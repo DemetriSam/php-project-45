@@ -2,8 +2,6 @@
 
 namespace Brain\Cli;
 
-use function Brain\Cli\launch;
-
 const CALC_RULES = 'What is the result of the expression?';
 const CALC_RANGE_OF_FIRST_NUMBER = [0, 99];
 const CALC_RANGE_OF_SECOND_NUMBER = [0, 10];

@@ -4,8 +4,6 @@ namespace Brain\Cli;
 
 use function cli\line;
 use function cli\prompt;
-use function Brain\Cli\greeting;
-use function Brain\Cli\askQuestion;
 
 const ROUNDS_COUNT = 3;
 

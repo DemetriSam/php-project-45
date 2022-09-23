@@ -2,23 +2,34 @@
 
 namespace Brain\Cli;
 
-use function Brain\Cli\isPrime;
+const PRIME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const PRIME_RANGE = [0, 100];
 
 function primeGame()
 {
-    $gameSet = [
-        'rules' => 'Answer "yes" if given number is prime. Otherwise answer "no".',
-        'set' => [],
-    ];
+    $rounds = [];
 
-    $questionsCount = 3;
-    $range = [0, 100];
-    for ($i = 0; $i < $questionsCount; $i++) {
-        $question = rand(...$range);
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $question = rand(...PRIME_RANGE);
         $rightAnswer = isPrime($question) ? 'yes' : 'no';
 
-        $gameSet['set'][] = [$question, $rightAnswer];
+        $rounds[] = [$question, $rightAnswer];
     }
 
-    return $gameSet;
+    return launch(PRIME_RULES, $rounds);
+}
+
+function isPrime(int $number)
+{
+    if ($number === 0 or $number === 1) {
+        return false;
+    }
+
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i === 0) {
+            return false;
+        }
+    }
+
+    return true;
 }

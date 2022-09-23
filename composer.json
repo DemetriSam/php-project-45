@@ -9,7 +9,6 @@
         },
         "files": [
             "src/Cli.php",
-            "src/Functions.php",
             "src/Launcher.php",
             "src/Games/even.php",
             "src/Games/calc.php",
