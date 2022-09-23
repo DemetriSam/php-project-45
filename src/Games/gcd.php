@@ -2,27 +2,37 @@
 
 namespace Brain\Cli;
 
-use function Brain\Cli\gcd;
+const GCD_RULES = 'What is the result of the expression?';
+const GCD_RANGE = [0, 99];
 
 function gcdGame()
 {
-    $gameSet = [
-        'rules' => 'What is the result of the expression?',
-        'set' => [],
-    ];
+    $rounds = [];
 
-    $questionsCount = 3;
-    $range = [0, 99];
-
-    for ($i = 0; $i < $questionsCount; $i++) {
-        $first = rand(...$range);
-        $second = rand(...$range);
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $first = rand(...GCD_RANGE);
+        $second = rand(...GCD_RANGE);
 
         $question = $first . ' ' . $second;
         $rightAnswer = gcd($first, $second);
 
-        $gameSet['set'][] = [$question, $rightAnswer];
+        $rounds[] = [$question, $rightAnswer];
     }
 
     return $gameSet;
+}
+
+function gcd(int $a, int $b)
+{
+    if ($b === 0) {
+        return $a;
+    }
+
+    $r = $a % $b;
+
+    if ($r === 0) {
+        return $b;
+    }
+
+    return gcd($b, $r);
 }

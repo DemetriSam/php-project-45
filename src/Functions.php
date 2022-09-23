@@ -5,20 +5,7 @@ namespace Brain\Cli;
 use function cli\line;
 use function cli\prompt;
 
-function gcd(int $a, int $b)
-{
-    if ($b === 0) {
-        return $a;
-    }
 
-    $r = $a % $b;
-
-    if ($r === 0) {
-        return $b;
-    }
-
-    return gcd($b, $r);
-}
 
 function isPrime(int $number)
 {
