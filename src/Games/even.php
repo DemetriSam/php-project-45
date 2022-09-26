@@ -18,7 +18,7 @@ function evenGame()
     return launch(EVEN_RULES, $rounds);
 }
 
-function isEvenRightAnswer($number)
+function isEvenRightAnswer(int $number)
 {
     $isEven = (bool)($number % 2) ? false : true;
     return $isEven ? 'yes' : 'no';

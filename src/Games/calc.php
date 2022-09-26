@@ -40,8 +40,8 @@ function getRandomAction(int $first, int $second)
             $rightAnswer = $first * $second;
             break;
         default:
+            //@phpstan-ignore-line
             throw new \Exception("Not found operator: $operator!");
-            break;
     }
 
     return [$question, $rightAnswer];
