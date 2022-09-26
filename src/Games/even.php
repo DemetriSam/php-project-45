@@ -11,11 +11,15 @@ function evenGame()
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $question = rand(...EVEN_RANGE);
-        $isEven = (bool)($question % 2) ? false : true;
-        $rightAnswer = $isEven ? 'yes' : 'no';
-
+        $rightAnswer = isEvenRightAnswer($question);
         $rounds[] = [$question, $rightAnswer];
     }
 
     return launch(EVEN_RULES, $rounds);
+}
+
+function isEvenRightAnswer($number)
+{
+    $isEven = (bool)($number % 2) ? false : true;
+    return $isEven ? 'yes' : 'no';
 }

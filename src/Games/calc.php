@@ -29,7 +29,6 @@ function getRandomAction(int $first, int $second)
     $operator = CALC_ACTIONS[$k];
 
     $question = implode(' ', [$first, $operator, $second]);
-
     switch ($operator) {
         case '+':
             $rightAnswer = $first + $second;
@@ -41,8 +40,7 @@ function getRandomAction(int $first, int $second)
             $rightAnswer = $first * $second;
             break;
         default:
-            $question = $first . ' + ' . $second . 'somthing is wrong, this is default question';
-            $rightAnswer = $first + $second;
+            throw new \Exception("Not found operator: $operator!");
             break;
     }
 

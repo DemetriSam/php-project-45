@@ -13,7 +13,7 @@ function gcdGame()
         $first = rand(...GCD_RANGE);
         $second = rand(...GCD_RANGE);
 
-        $question = $first . ' ' . $second;
+        $question = "{$first} {$second}";
         $rightAnswer = gcd($first, $second);
 
         $rounds[] = [$question, $rightAnswer];
