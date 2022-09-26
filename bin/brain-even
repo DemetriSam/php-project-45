@@ -3,6 +3,6 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use function Brain\Cli\evenGame;
+use function Brain\Games\evenGame;
 
 evenGame();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Cli;
+namespace Brain\Games;
 
 const PRIME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const PRIME_RANGE = [0, 100];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Cli;
+namespace Brain\Games;
 
 const CALC_RULES = 'What is the result of the expression?';
 const CALC_RANGE_OF_FIRST_NUMBER = [0, 99];

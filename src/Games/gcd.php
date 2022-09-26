@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Cli;
+namespace Brain\Games;
 
 const GCD_RULES = 'Find the greatest common divisor of given numbers.';
 const GCD_RANGE = [1, 99];

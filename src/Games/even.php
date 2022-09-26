@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Cli;
+namespace Brain\Games;
 
 const EVEN_RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 const EVEN_RANGE = [0, 1000];

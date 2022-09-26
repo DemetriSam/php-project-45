@@ -1,8 +1,6 @@
 <?php
 
-namespace Brain\Cli;
-
-use function Brain\Cli\isPrime;
+namespace Brain\Games;
 
 const PGS_RULES = 'What number is missing in the progression?';
 const PGS_START_RANGE = [0, 10];

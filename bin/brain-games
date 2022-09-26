@@ -3,6 +3,6 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use function Brain\Cli\greeting;
+use function Brain\Games\greeting;
 
 greeting();
