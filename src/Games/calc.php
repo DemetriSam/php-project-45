@@ -15,7 +15,7 @@ function calcGame()
         $first = rand(...CALC_RANGE_OF_FIRST_NUMBER);
         $second = rand(...CALC_RANGE_OF_SECOND_NUMBER);
 
-        [$question, $rightAnswer] = getRandomAction($first, $second);
+        [$question, $rightAnswer] = getQuestionAnswerPair($first, $second);
 
         $rounds[] = [$question, $rightAnswer];
     }
@@ -23,10 +23,10 @@ function calcGame()
     launch(CALC_RULES, $rounds);
 }
 
-function getRandomAction(int $first, int $second)
+function getQuestionAnswerPair(int $first, int $second)
 {
-    $k = array_rand(CALC_ACTIONS);
-    $operator = CALC_ACTIONS[$k];
+    $numberOfRandomOperator = array_rand(CALC_ACTIONS);
+    $operator = CALC_ACTIONS[$numberOfRandomOperator];
 
     $question = implode(' ', [$first, $operator, $second]);
     switch ($operator) {
